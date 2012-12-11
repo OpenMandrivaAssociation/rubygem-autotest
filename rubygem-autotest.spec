@@ -57,3 +57,10 @@ rm -rf %{buildroot}
 %doc %{ruby_gemdir}/gems/%{oname}-%{version}/%{oname}.gemspec
 %{ruby_gemdir}/cache/%{oname}-%{version}.gem
 %{ruby_gemdir}/specifications/%{oname}-%{version}.gemspec
+
+
+%changelog
+* Wed Dec 01 2010 Rémy Clouard <shikamaru@mandriva.org> 4.2.9-1mdv2011.0
++ Revision: 604611
+- import rubygem-autotest
+
