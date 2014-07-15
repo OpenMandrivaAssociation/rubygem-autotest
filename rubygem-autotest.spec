@@ -4,12 +4,11 @@
 Summary:    Autotest, without ZenTest
 Name:       rubygem-%{oname}
 Version:    4.2.9
-Release:    %mkrel 1
+Release:    2
 Group:      Development/Ruby
 License:    MIT
 URL:        http://github.com/grosser/autotest
 Source0:    %{oname}-%{version}.gem
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root
 Requires:   rubygems
 BuildRequires: rubygems
 BuildArch:  noarch
@@ -24,7 +23,6 @@ Autotest, without ZenTest
 %build
 
 %install
-rm -rf %{buildroot}
 mkdir -p %{buildroot}%{ruby_gemdir}
 gem install --local --install-dir %{buildroot}%{ruby_gemdir} \
             --force --rdoc %{SOURCE0}
@@ -36,10 +34,8 @@ find %{buildroot}%{ruby_gemdir}/gems/%{oname}-%{version}/bin -type f | xargs chm
 # remove vcs files
 rm -f %{buildroot}%{ruby_gemdir}/gems/%{oname}-%{version}/.gitignore
 %clean
-rm -rf %{buildroot}
 
 %files
-%defattr(-, root, root, -)
 %{_bindir}/unit_diff
 %{_bindir}/autotest
 %dir %{ruby_gemdir}/gems/%{oname}-%{version}/
@@ -57,10 +53,4 @@ rm -rf %{buildroot}
 %doc %{ruby_gemdir}/gems/%{oname}-%{version}/%{oname}.gemspec
 %{ruby_gemdir}/cache/%{oname}-%{version}.gem
 %{ruby_gemdir}/specifications/%{oname}-%{version}.gemspec
-
-
-%changelog
-* Wed Dec 01 2010 Rémy Clouard <shikamaru@mandriva.org> 4.2.9-1mdv2011.0
-+ Revision: 604611
-- import rubygem-autotest
 
