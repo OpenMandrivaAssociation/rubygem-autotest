@@ -4,7 +4,7 @@
 Summary:    Autotest, without ZenTest
 Name:       rubygem-%{oname}
 Version:    4.2.9
-Release:    2
+Release:    3
 Group:      Development/Ruby
 License:    MIT
 URL:        http://github.com/grosser/autotest
