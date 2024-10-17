@@ -7,7 +7,7 @@ Version:    4.2.9
 Release:    3
 Group:      Development/Ruby
 License:    MIT
-URL:        http://github.com/grosser/autotest
+URL:        https://github.com/grosser/autotest
 Source0:    %{oname}-%{version}.gem
 Requires:   rubygems
 BuildRequires: rubygems
